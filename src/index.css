@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@layer base {
+
+  html,
+  body {
+    @apply text-slate-100 min-h-screen antialiased selection:bg-violet-500/30;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* Fundo escuro premium com degradê suave nos cantos */
+    background: radial-gradient(125% 125% at 50% 10%, #020617 40%, #0f052d 100%);
+  }
+
+  /* Customização sutil da barra de rolagem */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+  }
+}
